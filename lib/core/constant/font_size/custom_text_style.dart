@@ -2,11 +2,21 @@ import 'package:flutter/material.dart';
 import '../color/custom_color.dart';
 
 class AppTextStyles {
+  static const TextStyle h1 = TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.w500,
+    color: AppColors.background,
+  );
 
   static const TextStyle h2 = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
     color: AppColors.primary,
+  );
+  static const TextStyle h2Normal = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
+    color: AppColors.background,
   );
 
   static const TextStyle h3 = TextStyle(
