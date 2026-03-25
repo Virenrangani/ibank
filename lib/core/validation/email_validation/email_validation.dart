@@ -1,0 +1,19 @@
+
+import '../../constant/string/custom_string.dart';
+
+String? validateEmail(String email) {
+  final emailValue = email.trim().toLowerCase();
+
+  if (emailValue.isEmpty) return AppStrings.emailRequired;
+  if (emailValue.contains(" ")) return AppStrings.emailNotContainsSpace;
+
+  final regex = RegExp(
+    r'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$',
+  );
+
+  if (!regex.hasMatch(emailValue)) {
+    return AppStrings.emailValid;
+  }
+
+  return null;
+}
