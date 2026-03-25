@@ -66,6 +66,8 @@ class AppStrings {
   static const String otpRequired="OTP is required";
   static const String otpMinChar="Minimum 4 characters required";
 
+  static const String welcomeMessage="Hi, Viren Rangani";
+
 
 
 }
