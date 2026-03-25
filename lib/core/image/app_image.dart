@@ -13,4 +13,10 @@ class AppImage {
 
   static const eye="asset/image/eye.png";
 
+  static const avatar="asset/image/Avatar.png";
+
+  static const bell="asset/image/Bell.png";
+
+  static const card="asset/image/Card.png";
+
 }
