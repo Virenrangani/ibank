@@ -59,87 +59,88 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:AppColors.primary,
-      body:SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
-        child: Column(
-          children: [
-            Gap(65),
-            Row(
-              children: [
-                Gap(30),
-                SizedBox(
-                  height:60,
-                  width: 60,
-                  child: Image.asset(AppImage.avatar,fit:BoxFit.fill),
-                ),
-                Gap(25),
-                Expanded(child: Text(AppStrings.welcomeMessage,style: AppTextStyles.h2Normal,)),
-                NotificationIcon(),
-                Gap(30)
-              ],
-            ),
-            Gap(25),
-            Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: AppColors.background,
-                borderRadius: CustomBorderRadius.verTop32
-              ),
-              child: Column(
+      body:SafeArea(
+        child: SingleChildScrollView(
+          physics: ClampingScrollPhysics(),
+          child: Column(
+            children: [
+              Gap(40),
+              Row(
                 children: [
-                  Gap(22),
-                  AspectRatio(
-                      aspectRatio: 16/10,
-                      child: Image.asset(AppImage.card,fit: BoxFit.fitWidth,)
+                  Gap(30),
+                  SizedBox(
+                    height:60,
+                    width: 60,
+                    child: Image.asset(AppImage.avatar,fit:BoxFit.fill),
                   ),
-                  Padding(
-                    padding: AppPadding.edgeAll28,
-                    child: GridView.builder(
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3,
-                          crossAxisSpacing: 20,
-                            mainAxisSpacing: 20
-                        ),
-                        padding: EdgeInsets.zero,
-                        itemCount: 9,
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        itemBuilder: (context,index){
-                          return Container(
-                            decoration: BoxDecoration(
-                              borderRadius: CustomBorderRadius.cir12,
-                              color: AppColors.background,
-                              boxShadow: [BoxShadow(
-                                color: AppColors.border,
-                                blurRadius: 4,
-                                offset: Offset(0, 2),
-                              )]
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SizedBox(
-                                  height: 30,
-                                  width: 30,
-                                  child: Image.asset(bankService[index]['image'],fit: BoxFit.cover,),
-                                ),
-                                Gap(10),
-                                Text(
-                                  bankService[index]['title'], style: AppTextStyles.titleSmall,
-                                  textAlign: TextAlign.center,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ],
-                            ),
-                          );
-                        }
-                    ),
-                  ),
+                  Gap(25),
+                  Expanded(child: Text(AppStrings.welcomeMessage,style: AppTextStyles.h2Normal,)),
+                  NotificationIcon(),
+                  Gap(30)
                 ],
               ),
-            )
-          ],
+              Gap(25),
+              Container(
+                decoration: BoxDecoration(
+                  color: AppColors.background,
+                  borderRadius: CustomBorderRadius.verTop32
+                ),
+                child: Column(
+                  children: [
+                    Gap(22),
+                    AspectRatio(
+                        aspectRatio: 16/10,
+                        child: Image.asset(AppImage.card,fit: BoxFit.fitWidth,)
+                    ),
+                    Padding(
+                      padding: AppPadding.edgeAll28,
+                      child: GridView.builder(
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 3,
+                            crossAxisSpacing: 20,
+                              mainAxisSpacing: 20
+                          ),
+                          padding: EdgeInsets.zero,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: 9,
+                          shrinkWrap: true,
+                          itemBuilder: (context,index){
+                            return Container(
+                              decoration: BoxDecoration(
+                                borderRadius: CustomBorderRadius.cir12,
+                                color: AppColors.background,
+                                boxShadow: [BoxShadow(
+                                  color: AppColors.border,
+                                  blurRadius: 4,
+                                  offset: Offset(0, 2),
+                                )]
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                    height: 30,
+                                    width: 30,
+                                    child: Image.asset(bankService[index]['image'],fit: BoxFit.cover,),
+                                  ),
+                                  Gap(10),
+                                  Text(
+                                    bankService[index]['title'], style: AppTextStyles.titleSmall,
+                                    textAlign: TextAlign.center,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ),
+                            );
+                          }
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
