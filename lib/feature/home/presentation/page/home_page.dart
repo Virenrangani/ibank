@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor:AppColors.primary,
       body:Column(
         children: [
-          Gap(70),
+          Gap(65),
           Row(
             children: [
               Gap(30),
@@ -32,23 +32,24 @@ class _HomePageState extends State<HomePage> {
                 child: Image.asset(AppImage.avatar,fit:BoxFit.fill),
               ),
               Gap(25),
-              Text(AppStrings.welcomeMessage,style: AppTextStyles.h2Normal,),
-              Spacer(),
+              Expanded(child: Text(AppStrings.welcomeMessage,style: AppTextStyles.h2Normal,)),
               NotificationIcon(),
+              Gap(30)
             ],
           ),
           Gap(25),
           Container(
-            padding: AppPadding.edgeAll20,
+            width: double.infinity,
             decoration: BoxDecoration(
               color: AppColors.background,
-              borderRadius: CustomBorderRadius.cir24
+              borderRadius: CustomBorderRadius.cir32
             ),
             child: Column(
               children: [
-                SizedBox(
-                  height:300,
-                  child: Image.asset(AppImage.card,fit: BoxFit.fill,),
+                Gap(22),
+                AspectRatio(
+                    aspectRatio: 16/10,
+                    child: Image.asset(AppImage.card,fit: BoxFit.fitWidth,)
                 )
               ],
             ),
