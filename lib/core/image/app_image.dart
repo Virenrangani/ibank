@@ -29,4 +29,6 @@ class AppImage {
   static const b8="asset/image/8.png";
   static const b9="asset/image/9.png";
 
+  static const visa="asset/image/VISA.png";
+
 }
