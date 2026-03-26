@@ -3,8 +3,8 @@ import '../color/custom_color.dart';
 
 class AppTextStyles {
   static const TextStyle h1 = TextStyle(
-    fontSize: 28,
-    fontWeight: FontWeight.w500,
+    fontSize: 30,
+    fontWeight: FontWeight.w600,
     color: AppColors.background,
   );
 
@@ -21,7 +21,7 @@ class AppTextStyles {
 
   static const TextStyle h3 = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w500,
     color: AppColors.background
   );
 
@@ -36,6 +36,11 @@ class AppTextStyles {
       fontWeight: FontWeight.w500,
       color: AppColors.secondaryContainer
   );
+  static const TextStyle h4Light = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w400,
+      color: AppColors.background
+  );
 
   static const TextStyle h5 = TextStyle(
       fontSize: 20,
@@ -49,8 +54,8 @@ class AppTextStyles {
       color: AppColors.textSecondary
   );
 
-  static TextStyle caption({Color color = AppColors.textSecondary}) => TextStyle(
-      fontSize: 15,
+  static TextStyle caption({Color color = AppColors.textSecondary,double fontSize=15}) => TextStyle(
+      fontSize: fontSize,
       fontWeight: FontWeight.w400,
       color: color
   );
