@@ -17,25 +17,15 @@ class CustomBorderRadius {
   static BorderRadius verTop16=BorderRadius.vertical(top:Radius.circular(16));
   static BorderRadius verTop20=BorderRadius.vertical(top:Radius.circular(20));
   static BorderRadius verTop24=BorderRadius.vertical(top: Radius.circular(24));
+  static BorderRadius verTop28=BorderRadius.vertical(top: Radius.circular(28));
+  static BorderRadius verTop32=BorderRadius.vertical(top: Radius.circular(32));
+
+
 
   //symmetric vertical bottom
   static BorderRadius verBottom12=BorderRadius.vertical(bottom:Radius.circular(12));
   static BorderRadius verBottom16=BorderRadius.vertical(bottom:Radius.circular(16));
   static BorderRadius verBottom20=BorderRadius.vertical(bottom:Radius.circular(20));
-
-
-  //symmetric horizontal left
-  static BorderRadius horiLeft12=BorderRadius.horizontal(left:Radius.circular(12));
-  static BorderRadius horiLeft16=BorderRadius.horizontal(left:Radius.circular(16));
-  static BorderRadius horiLeft20=BorderRadius.horizontal(left:Radius.circular(20));
-
-  //symmetric horizontal right
-  static BorderRadius horiRight12=BorderRadius.horizontal(left:Radius.circular(12));
-  static BorderRadius horiRight16=BorderRadius.horizontal(left:Radius.circular(16));
-  static BorderRadius horiRight20=BorderRadius.horizontal(left:Radius.circular(20));
-
-  static BorderRadius onlyTopBottomRight12=BorderRadius.only(
-    topRight: Radius.circular(12), bottomRight: Radius.circular(12),);
 
   static BorderRadius onlyTop28=BorderRadius.only(
       topLeft: Radius.circular(28),topRight: Radius.circular(28)
