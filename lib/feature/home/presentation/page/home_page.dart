@@ -16,6 +16,45 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<Map<String,dynamic>> bankService=[
+    {
+      'image':AppImage.b1,
+      'title':AppStrings.accountCard
+    },
+    {
+      'image':AppImage.b2,
+      'title':AppStrings.transfer
+    },
+    {
+      'image':AppImage.b3,
+      'title':AppStrings.withdraw
+    },
+    {
+      'image':AppImage.b4,
+      'title':AppStrings.mobilePrepaid
+    },
+    {
+      'image':AppImage.b5,
+      'title':AppStrings.payBill
+    },
+    {
+      'image':AppImage.b6,
+      'title':AppStrings.saveOnline
+    },
+    {
+      'image':AppImage.b7,
+      'title':AppStrings.creditCard
+    },
+    {
+      'image':AppImage.b8,
+      'title':AppStrings.transactionReport
+    },
+    {
+      'image':AppImage.b9,
+      'title':AppStrings.beneficiary
+    }
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,6 +115,23 @@ class _HomePageState extends State<HomePage> {
                                 offset: Offset(0, 2),
                               )]
                             ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                  width: 30,
+                                  child: Image.asset(bankService[index]['image'],fit: BoxFit.cover,),
+                                ),
+                                Gap(10),
+                                Text(
+                                  bankService[index]['title'], style: AppTextStyles.titleSmall,
+                                  textAlign: TextAlign.center,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
                           );
                         }
                     ),
@@ -86,7 +142,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-
     );
   }
 }
