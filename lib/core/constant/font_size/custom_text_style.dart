@@ -7,6 +7,11 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.background,
   );
+  static TextStyle h1Light({Color color = AppColors.background}) => TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
 
   static const TextStyle h2 = TextStyle(
     fontSize: 24,
@@ -39,10 +44,10 @@ class AppTextStyles {
       fontWeight: FontWeight.w500,
       color: AppColors.secondaryContainer
   );
-  static const TextStyle h4Light = TextStyle(
-      fontSize: 20,
+  static  TextStyle h4Medium({Color color=AppColors.background}) => TextStyle(
+      fontSize: 18,
       fontWeight: FontWeight.w400,
-      color: AppColors.background
+      color: color
   );
 
   static const TextStyle h5 = TextStyle(
