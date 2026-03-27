@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:ibank/core/constant/color/custom_color.dart';
 import 'package:ibank/core/constant/padding/custom_padding.dart';
+import 'package:ibank/core/image/app_image.dart';
 import 'package:ibank/feature/home/presentation/page/home_page.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -24,9 +25,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   final List<Widget> _pages = const [
     HomePage(),
-    Center(child: Text("play")),
-    Center(child: Text("profile"),),
-
+    Center(child: Text("search")),
+    Center(child: Text("settings"),),
+    Center(child: Text("settings"),)
   ];
 
   void _onItemTapped(int index) {
@@ -86,11 +87,40 @@ class _BottomNavBarState extends State<BottomNavBar> {
           activeColor: AppColors.background,
           iconSize:32,
           tabBackgroundColor: AppColors.primary,
-          padding:AppPadding.edgeAll4,
+          padding:AppPadding.edgeAll8,
           tabs: [
-            GButton(icon: Icons.home, text: "Home"),
-            GButton(icon: Icons.search,text: "play",),
-            GButton(icon: Icons.person,text: "profile",)
+            GButton(icon: Icons.home, text: "Home",
+              leading:SizedBox(
+              height: 25,
+                width: 25,
+                child: Image.asset(AppImage.home,
+                  color:_selectedIndex==0?AppColors.background:AppColors.secondaryContainer,)
+              )
+            ),
+            GButton(icon: Icons.search,text: "Search",
+                leading:SizedBox(
+                    height: 25,
+                    width: 25,
+                    child: Image.asset(AppImage.search,
+                        color:_selectedIndex==1?AppColors.background:AppColors.secondaryContainer)
+                )
+            ),
+            GButton(icon: Icons.person,text: "Message",
+                leading:SizedBox(
+                    height: 25,
+                    width: 25,
+                    child: Image.asset(AppImage.message,
+                        color:_selectedIndex==2?AppColors.background:AppColors.secondaryContainer)
+                )
+            ),
+            GButton(icon: Icons.person,text: "Setting",
+                leading:SizedBox(
+                    height: 25,
+                    width: 25,
+                    child: Image.asset(AppImage.setting,
+                        color:_selectedIndex==3?AppColors.background:AppColors.secondaryContainer)
+                )
+            )
           ],
         ),
       ),
