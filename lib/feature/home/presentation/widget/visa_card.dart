@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:gap/gap.dart';
+import 'package:ibank/core/validation/mask_card_number/mask_card_number.dart';
 import '../../../../core/constant/border/custom_border_radius.dart';
 import '../../../../core/constant/color/custom_color.dart';
 import '../../../../core/constant/font_size/custom_text_style.dart';
@@ -47,17 +48,13 @@ class VisaCard extends StatelessWidget {
                     children: [
                       Text(data.name, style: AppTextStyles.h1),
                       const Gap(30),
-                      Text(data.cardType, style: AppTextStyles.h3),
+                      Text(data.cardType, style: AppTextStyles.h4Medium()),
                       const Gap(16),
-                      Text(data.cardNumber, style: AppTextStyles.h2Normal(fontWeight: FontWeight.w400)),
-                      const Gap(8),
+                      Text(maskCardNumber(data.cardNumber), style: AppTextStyles.h2Normal(fontWeight: FontWeight.w400)),
+                      const Gap(6),
                       Text(
                         data.balance,
-                        style: AppTextStyles.caption(
-                          color: AppColors.background,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold
-                        ),
+                        style: AppTextStyles.h1Light()
                       ),
                     ],
                   ),
