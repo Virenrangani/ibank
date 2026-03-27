@@ -57,10 +57,10 @@ class _CardAnimationState extends State<CardAnimation> with TickerProviderStateM
             final curve = Curves.easeInOut.transform(_controller.value);
 
             final slideX  = curve * 400;
-            final scale2  = 0.90 + (curve * 0.10);
-            final top2    = 14.0 - (curve * 14);
-            final scale3  = 0.82 + (curve * 0.08);
-            final top3    = 28.0 - (curve * 14);
+            final scale2  = 0.98 + (curve * 0.10);
+            final top2    = 12 - (curve * 12);
+            final scale3  = 0.86 + (curve * 0.08);
+            final top3    = 30 - (curve * 14);
 
             return Stack(
               clipBehavior: Clip.none,
@@ -71,7 +71,7 @@ class _CardAnimationState extends State<CardAnimation> with TickerProviderStateM
                   left: 24,
                   right: 24,
                   child: Transform.translate(
-                    offset: Offset(0,40),
+                    offset: Offset(0,26),
                     child: Transform.scale(
                       scale: scale3,
                       alignment: Alignment.topCenter,
@@ -85,7 +85,7 @@ class _CardAnimationState extends State<CardAnimation> with TickerProviderStateM
                   left: 24,
                   right: 24,
                   child: Transform.translate(
-                    offset: Offset(0, 22),
+                    offset: Offset(0,4),
                     child: Transform.scale(
                       scale: scale2,
                       alignment: Alignment.topCenter,
