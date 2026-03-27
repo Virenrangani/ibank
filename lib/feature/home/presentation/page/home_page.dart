@@ -91,9 +91,9 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Gap(24),
                     CardAnimation(),
-                    Gap(20),
+                    Gap(18),
                     Padding(
-                      padding: AppPadding.edgeAll28,
+                      padding: AppPadding.edgeAll24,
                       child: GridView.builder(
                           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 3,
