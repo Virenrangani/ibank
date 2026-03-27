@@ -6,7 +6,9 @@ import 'package:ibank/core/constant/font_size/custom_text_style.dart';
 import 'package:ibank/core/constant/padding/custom_padding.dart';
 import 'package:ibank/core/constant/string/custom_string.dart';
 import 'package:ibank/core/image/app_image.dart';
+import 'package:ibank/feature/home/presentation/widget/card_animation.dart';
 import 'package:ibank/feature/home/presentation/widget/notification_icon.dart';
+import 'package:ibank/feature/home/presentation/widget/visa_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -64,7 +66,7 @@ class _HomePageState extends State<HomePage> {
           physics: ClampingScrollPhysics(),
           child: Column(
             children: [
-              Gap(40),
+              Gap(20),
               Row(
                 children: [
                   Gap(30),
@@ -74,12 +76,12 @@ class _HomePageState extends State<HomePage> {
                     child: Image.asset(AppImage.avatar,fit:BoxFit.fill),
                   ),
                   Gap(25),
-                  Expanded(child: Text(AppStrings.welcomeMessage,style: AppTextStyles.h2Normal,)),
+                  Expanded(child: Text(AppStrings.welcomeMessage,style: AppTextStyles.h2Normal(),)),
                   NotificationIcon(),
                   Gap(30)
                 ],
               ),
-              Gap(25),
+              Gap(32),
               Container(
                 decoration: BoxDecoration(
                   color: AppColors.background,
@@ -87,11 +89,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: Column(
                   children: [
-                    Gap(22),
-                    AspectRatio(
-                        aspectRatio: 16/10,
-                        child: Image.asset(AppImage.card,fit: BoxFit.fitWidth,)
-                    ),
+                    Gap(24),
+                    CardAnimation(),
+                    Gap(20),
                     Padding(
                       padding: AppPadding.edgeAll28,
                       child: GridView.builder(
@@ -111,8 +111,7 @@ class _HomePageState extends State<HomePage> {
                                 color: AppColors.background,
                                 boxShadow: [BoxShadow(
                                   color: AppColors.border,
-                                  blurRadius: 4,
-                                  offset: Offset(0, 2),
+                                  blurRadius:2,
                                 )]
                               ),
                               child: Column(
