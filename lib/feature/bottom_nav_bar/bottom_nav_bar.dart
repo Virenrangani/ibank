@@ -71,8 +71,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           color: AppColors.background,
           boxShadow: [BoxShadow(
             color: AppColors.border,
-            blurRadius: 3,
-            offset: Offset(2,0),
+            blurRadius:6,
           )]
         ),
         padding: AppPadding.edgeAll24,
@@ -87,7 +86,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           activeColor: AppColors.background,
           iconSize:32,
           tabBackgroundColor: AppColors.primary,
-          padding:AppPadding.edgeAll8,
+          padding:AppPadding.edgeAll12,
           tabs: [
             GButton(icon: Icons.home, text: "Home",
               leading:SizedBox(
