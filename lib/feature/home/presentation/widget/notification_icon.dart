@@ -9,16 +9,16 @@ class NotificationIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height:36,
-      width: 36,
+      height:32,
+      width: 32,
       child: Stack(
         children: [
           Positioned(
             bottom: 0,
             left: 0,
             child: SizedBox(
-              height: 30,
-              width: 30,
+              height: 26,
+              width: 26,
               child: Image.asset(AppImage.bell),
             ),
           ),
@@ -26,8 +26,8 @@ class NotificationIcon extends StatelessWidget {
             top: 0,
             right: 0,
             child: Container(
-              height: 22,
-              width: 22,
+              height: 20,
+              width: 20,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: AppColors.error
