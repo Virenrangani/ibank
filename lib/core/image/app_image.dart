@@ -31,4 +31,9 @@ class AppImage {
 
   static const visa="asset/image/VISA.png";
 
+  static const home="asset/image/home.png";
+  static const search="asset/image/search.png";
+  static const message="asset/image/message.png";
+  static const setting="asset/image/settings.png";
+
 }
