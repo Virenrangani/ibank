@@ -4,7 +4,7 @@ import '../color/custom_color.dart';
 class AppTextStyles {
   static const TextStyle h1 = TextStyle(
     fontSize: 30,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w400,
     color: AppColors.background,
   );
 
@@ -13,9 +13,12 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.primary,
   );
-  static const TextStyle h2Normal = TextStyle(
+  static  TextStyle h2Normal({
+    Color color = AppColors.background ,
+    FontWeight fontWeight = FontWeight.w600,
+  }) => TextStyle(
     fontSize: 22,
-    fontWeight: FontWeight.w600,
+    fontWeight: fontWeight,
     color: AppColors.background,
   );
 
@@ -54,9 +57,13 @@ class AppTextStyles {
       color: AppColors.textSecondary
   );
 
-  static TextStyle caption({Color color = AppColors.textSecondary,double fontSize=15}) => TextStyle(
+  static TextStyle caption({
+    Color color = AppColors.textSecondary,
+    double fontSize=15,
+    FontWeight fontWeight = FontWeight.w400,
+  }) => TextStyle(
       fontSize: fontSize,
-      fontWeight: FontWeight.w400,
+      fontWeight: fontWeight,
       color: color
   );
 
