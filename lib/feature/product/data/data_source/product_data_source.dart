@@ -12,6 +12,7 @@ class ProductDataSourceImpl extends ProductDataSource {
     required int limit,
     required int skip,
   }) async {
+    Future.delayed(Duration(seconds:3));
     final response = await ApiDio.dio.get(
       ApiEndPoints.product,
       queryParameters: {
