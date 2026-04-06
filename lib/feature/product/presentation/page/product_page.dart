@@ -4,6 +4,7 @@ import 'package:ibank/core/constant/color/custom_color.dart';
 import 'package:ibank/core/constant/font_size/custom_text_style.dart';
 import 'package:ibank/core/constant/padding/custom_padding.dart';
 import 'package:ibank/core/constant/string/custom_string.dart';
+import 'package:ibank/core/widget/snack_bar/custom_snack_bar.dart';
 import '../cubit/product_cubit.dart';
 import '../cubit/product_state.dart';
 
@@ -49,7 +50,14 @@ class _ProductPageState extends State<ProductPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(state.message),
+                  Column(
+                    children: [
+                      Text(state.message),
+                      ElevatedButton(onPressed: ()async{
+                        await context.read<ProductCubit>().fetchProducts();
+                      }, child: Text("Retry"))
+                    ],
+                  ),
                 ],
               ),
             );
