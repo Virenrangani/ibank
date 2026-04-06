@@ -16,5 +16,8 @@ class AuthInterceptor extends Interceptor {
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
     print('ERROR : ${err.response?.statusCode} : ${err.message}');
+    if(err.response?.statusCode==429){
     }
+    return handler.next(err);
+  }
 }
