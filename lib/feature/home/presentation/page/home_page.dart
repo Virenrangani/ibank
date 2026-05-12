@@ -7,55 +7,11 @@ import 'package:ibank/core/constant/padding/custom_padding.dart';
 import 'package:ibank/core/constant/string/custom_string.dart';
 import 'package:ibank/core/image/app_image.dart';
 import 'package:ibank/feature/home/presentation/widget/card_animation.dart';
+import 'package:ibank/feature/home/presentation/widget/grid_card.dart';
 import 'package:ibank/feature/home/presentation/widget/notification_icon.dart';
-import 'package:ibank/feature/home/presentation/widget/visa_card.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  final List<Map<String,dynamic>> bankService=[
-    {
-      'image':AppImage.b1,
-      'title':AppStrings.accountCard
-    },
-    {
-      'image':AppImage.b2,
-      'title':AppStrings.transfer
-    },
-    {
-      'image':AppImage.b3,
-      'title':AppStrings.withdraw
-    },
-    {
-      'image':AppImage.b4,
-      'title':AppStrings.mobilePrepaid
-    },
-    {
-      'image':AppImage.b5,
-      'title':AppStrings.payBill
-    },
-    {
-      'image':AppImage.b6,
-      'title':AppStrings.saveOnline
-    },
-    {
-      'image':AppImage.b7,
-      'title':AppStrings.creditCard
-    },
-    {
-      'image':AppImage.b8,
-      'title':AppStrings.transactionReport
-    },
-    {
-      'image':AppImage.b9,
-      'title':AppStrings.beneficiary
-    }
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -105,33 +61,7 @@ class _HomePageState extends State<HomePage> {
                           itemCount: 9,
                           shrinkWrap: true,
                           itemBuilder: (context,index){
-                            return Container(
-                              decoration: BoxDecoration(
-                                borderRadius: CustomBorderRadius.cir12,
-                                color: AppColors.background,
-                                boxShadow: [BoxShadow(
-                                  color: AppColors.border,
-                                  blurRadius:2,
-                                )]
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  SizedBox(
-                                    height: 30,
-                                    width: 30,
-                                    child: Image.asset(bankService[index]['image'],fit: BoxFit.cover,),
-                                  ),
-                                  Gap(10),
-                                  Text(
-                                    bankService[index]['title'], style: AppTextStyles.titleSmall,
-                                    textAlign: TextAlign.center,
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ],
-                              ),
-                            );
+                            return GridCard(index:index);
                           }
                       ),
                     ),
