@@ -14,6 +14,9 @@ class AppColors {
   static const Color background = Color(0xFFFFFFFF);
   static const Color surface = Colors.white;
 
+  static const Color cardColor=Color(0xFF1573FF);
+  static const Color cardCircle=Color(0xFF4EB4FF);
+
   static const Color textPrimary = Color(0xFF111827);
   static const Color textSecondary = Color(0xFF343434);
   static const Color textLight = Color(0xFFCACACA);

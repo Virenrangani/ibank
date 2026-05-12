@@ -66,6 +66,17 @@ class AppStrings {
   static const String otpRequired="OTP is required";
   static const String otpMinChar="Minimum 4 characters required";
 
+  static const String welcomeMessage="Hi, Viren Rangani";
+
+  static const String accountCard="Account and Card";
+  static const String transfer="Transfer";
+  static const String withdraw="Withdraw";
+  static const String mobilePrepaid="Mobile prepaid";
+  static const String payBill="Pay the bill";
+  static const String saveOnline="Save online";
+  static const String creditCard="Credit card";
+  static const String transactionReport="Transaction report";
+  static const String beneficiary="Beneficiary";
 
 
 }

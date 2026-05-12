@@ -2,16 +2,34 @@ import 'package:flutter/material.dart';
 import '../color/custom_color.dart';
 
 class AppTextStyles {
+  static const TextStyle h1 = TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.w400,
+    color: AppColors.background,
+  );
+  static TextStyle h1Light({Color color = AppColors.background}) => TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
 
   static const TextStyle h2 = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
     color: AppColors.primary,
   );
+  static  TextStyle h2Normal({
+    Color color = AppColors.background ,
+    FontWeight fontWeight = FontWeight.w600,
+  }) => TextStyle(
+    fontSize: 22,
+    fontWeight: fontWeight,
+    color: AppColors.background,
+  );
 
   static const TextStyle h3 = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w500,
     color: AppColors.background
   );
 
@@ -26,6 +44,11 @@ class AppTextStyles {
       fontWeight: FontWeight.w500,
       color: AppColors.secondaryContainer
   );
+  static  TextStyle h4Medium({Color color=AppColors.background}) => TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w400,
+      color: color
+  );
 
   static const TextStyle h5 = TextStyle(
       fontSize: 20,
@@ -39,9 +62,13 @@ class AppTextStyles {
       color: AppColors.textSecondary
   );
 
-  static TextStyle caption({Color color = AppColors.textSecondary}) => TextStyle(
-      fontSize: 15,
-      fontWeight: FontWeight.w400,
+  static TextStyle caption({
+    Color color = AppColors.textSecondary,
+    double fontSize=15,
+    FontWeight fontWeight = FontWeight.w400,
+  }) => TextStyle(
+      fontSize: fontSize,
+      fontWeight: fontWeight,
       color: color
   );
 
